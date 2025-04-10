@@ -1,0 +1,5 @@
+packages required:
+# deep_translator
+# PyQt5
+
+To use the main_ui.ui, download "Qt Designer"
