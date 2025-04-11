@@ -11,5 +11,4 @@ Sample documents in the folder
 
 ## next work
 
-implement attach file for pdf and docx too
-add an option to read out translated text
+make the ui better

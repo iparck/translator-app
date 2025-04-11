@@ -25,7 +25,7 @@
        </font>
       </property>
       <property name="text">
-       <string>English</string>
+       <string>Enter Text</string>
       </property>
      </widget>
     </item>
@@ -52,6 +52,13 @@
        <widget class="QPushButton" name="attach_file_button">
         <property name="text">
          <string>Attach File</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="speech_text_button">
+        <property name="text">
+         <string>Speak</string>
         </property>
        </widget>
       </item>
@@ -85,7 +92,31 @@
      </widget>
     </item>
     <item>
-     <widget class="QComboBox" name="language_combo_box"/>
+     <layout class="QHBoxLayout" name="button_layout2">
+      <item>
+       <widget class="QComboBox" name="language_combo_box">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>4</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="text_speech_button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>1</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>🔊</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>

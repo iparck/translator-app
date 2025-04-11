@@ -1,5 +1,23 @@
-packages required:
-# deep_translator
-# PyQt5
+------ Required python libraries
 
-To use the main_ui.ui, download "Qt Designer"
+PyQt5 - (required for the WHOLE UI)
+deep-translator - (required for... the program as a whole...)
+
+
+------ Optional but recommended
+
+speechrecognition - (for converting speech to text)
+pyttsx3 - (for converting text to speech)
+
+PyMuPDF - (for reading PDF files for translation)
+python-docx - (for reading docx files for translation)
+
+
+------ commands
+
+Necessary: "pip install PyQt5 deep-translator"
+
+speechrecognition: "pip install speechrecognition"
+pyttsx3: "pip install pyttsx3"
+PyMuPDF: "pip install PyMuPDF"
+python-docx: "pip install python-docx"

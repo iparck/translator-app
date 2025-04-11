@@ -1,5 +1,4 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QFileDialog
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -7,7 +6,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(612, 479)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-
+        
         self.vertical_layout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.vertical_layout.setObjectName("vertical_layout")
 
@@ -39,6 +38,10 @@ class Ui_MainWindow(object):
         self.attach_file_button.setObjectName("attach_file_button")
         self.button_layout.addWidget(self.attach_file_button)
 
+        self.speech_text_button = QtWidgets.QPushButton(self.centralwidget)
+        self.speech_text_button.setObjectName("speech_text_button")
+        self.button_layout.addWidget(self.speech_text_button)
+
         self.vertical_layout.addLayout(self.button_layout)
 
         self.output_label = QtWidgets.QLabel(self.centralwidget)
@@ -59,9 +62,28 @@ class Ui_MainWindow(object):
         self.output_text_edit.setObjectName("output_text_edit")
         self.vertical_layout.addWidget(self.output_text_edit)
 
+        self.button_layout2 = QtWidgets.QHBoxLayout()
+        self.button_layout2.setObjectName("button_layout2")
+
         self.language_combo_box = QtWidgets.QComboBox(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(4)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.language_combo_box.sizePolicy().hasHeightForWidth())
+        self.language_combo_box.setSizePolicy(sizePolicy)
         self.language_combo_box.setObjectName("language_combo_box")
-        self.vertical_layout.addWidget(self.language_combo_box)
+        self.button_layout2.addWidget(self.language_combo_box)
+
+        self.text_speech_button = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(1)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.text_speech_button.sizePolicy().hasHeightForWidth())
+        self.text_speech_button.setSizePolicy(sizePolicy)
+        self.text_speech_button.setObjectName("text_speech_button")
+        self.button_layout2.addWidget(self.text_speech_button)
+
+        self.vertical_layout.addLayout(self.button_layout2)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -83,4 +105,6 @@ class Ui_MainWindow(object):
         self.input_label.setText(_translate("MainWindow", "Enter Text"))
         self.translate_button.setText(_translate("MainWindow", "Translate"))
         self.attach_file_button.setText(_translate("MainWindow", "Attach File"))
+        self.speech_text_button.setText(_translate("MainWindow", "Speak"))
         self.output_label.setText(_translate("MainWindow", "Translation"))
+        self.text_speech_button.setText(_translate("MainWindow", "🔊"))
